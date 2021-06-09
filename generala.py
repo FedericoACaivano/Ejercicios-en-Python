@@ -13,27 +13,6 @@ def tirar():
     return tirada
 
 
-def es_generala(tirada):
-    resultado = False
-    g1 = [1, 1, 1, 1, 1]
-    g2 = [2, 2, 2, 2, 2]
-    g3 = [3, 3, 3, 3, 3]
-    g4 = [4, 4, 4, 4, 4]
-    g5 = [5, 5, 5, 5, 5]
-    g6 = [6, 6, 6, 6, 6]
-    
-    gt = [g1, g2, g3, g4, g5, g6]
-    
-    for x in gt:    
-        if tirada == x:
-            resultado = True
-
-    return resultado
-
-
-#print(tirar())
-#print(es_generala(tirar()))
-
 t = tirar()
 cont = Counter(t)
 maximo = max(Counter(t).values())
@@ -84,18 +63,25 @@ for x3 in t3:
 
 print(f'Me anoto {maximo*dados} al {dados}')
 
+#%%
+def es_generala(tirada):
+    '''Evalúa si sale generala servida'''
+    resultado = False
+    g1 = [1, 1, 1, 1, 1]
+    g2 = [2, 2, 2, 2, 2]
+    g3 = [3, 3, 3, 3, 3]
+    g4 = [4, 4, 4, 4, 4]
+    g5 = [5, 5, 5, 5, 5]
+    g6 = [6, 6, 6, 6, 6]
+    
+    gt = [g1, g2, g3, g4, g5, g6]
+    
+    for x in gt:    
+        if tirada == x:
+            resultado = True
+
+    return resultado
 
 
-
-
-
-
-
-
-
-
-
-
-#N = 10
-#G = sum([es_generala(tirar()) for i in range(N)])
-#prob = G/N
+#print(tirar())
+#print(es_generala(tirar()))
