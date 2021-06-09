@@ -8,6 +8,7 @@ def randomwalk(largo):
 
 N = 100000
 
+
 #%%
 plt.subplot(2, 1, 1)
 mindist = 10000 
